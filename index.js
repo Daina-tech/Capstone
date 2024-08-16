@@ -5,6 +5,7 @@ import { camelCase } from "lodash";
 import axios from "axios";
 
 const router = new Navigo("/");
+
 function render(state = store.home) {
   document.querySelector("#root").innerHTML = `
       ${header(state)}
@@ -15,7 +16,12 @@ function render(state = store.home) {
 
   router.updatePageLinks();
 }
+
 // add menu toggle to bars icon in nav bar
+// document.querySelector(".fa-bars").addEventListener("click", () => {
+//   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+// });
+
 router.hooks({
   // We pass in the `done` function to the before hook handler to allow the function to tell Navigo we are finished with the before hook.
   // The `match` parameter is the data that is passed from Navigo to the before hook handler with details about the route being accessed.
@@ -26,27 +32,36 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       // Add a case for each view that needs data from an API
-      case "":
-        // New Axios get request utilizing already made environment variable
+      // New Case for the Home View
+      case "home":
         axios
-          .get(``)
+        // New Axios get request utilizing already made environment variable
+          .get(
+            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&units=imperial&q=st%20louis`
+          )
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-            console.log("response", response);
+            store.home.weather = {
+              city: response.data.name,
+              temp: response.data.main.temp,
+              feelsLike: response.data.main.feels_like,
+              description: response.data.weather[0].main,
+            };
             done();
           })
           .catch((error) => {
-            console.log("It puked", error);
+            console.log(error);
             done();
           });
           break;
-      case "search??" :
+      case "search" :
         // New Axios get request utilizing already made environment variable
         axios
           .get(`https://sc-pizza-api.onrender.com/pizzas`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
+            store.search = response.data;
             done();
           })
           .catch((error) => {
@@ -74,7 +89,7 @@ router.hooks({
     });
   }
 });
-router.on("/", () => render(store.home)).resolve();
+
 router
 .on({
   "/": () => render(),
@@ -94,23 +109,3 @@ router
   },
 })
 .resolve();
-router.updatePageLinks();
-return html`<li><a href="${item.url}" title="${item.text}" data-navigo>${item.text}</a></li>`;
-
-// adding one route
-router.on("/", () => console.log("Visiting Home Page")).resolve();
-
-// adding more than one route
-router.on({
-  routeOne: () => console.log("Visiting Route One"),
-  routeTwo: () => console.log("Visiting Route Two"),
-});
-
-router.on(":x", (defaultParam) => defaultParam);
-// returns:
-// {x: "<route entered in URL>"}
-
-// When the route http://localhost:1234/home is hit then match.data.view will return "home"
-router.on(":view", (match) => match.data.view);
-// returns:
-// "<route entered in URL>"

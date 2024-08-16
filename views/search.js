@@ -6,7 +6,7 @@ export default () => html`
       <h2>Search For Stops</h2>
       <div>
         <label for="state">State</label>
-        <section id="state" name="state">
+        <select id="state" name="state" required>
           <option value="">Select a State</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
