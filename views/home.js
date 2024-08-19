@@ -7,10 +7,10 @@ export default state => html`
     ${state.weather.feelsLike}F.
   </h3>
   <section id="hero">
-    <h2>
-      fresh N fuel <br />
-      Find your next stop!
-    </h2>
-    <a href="index.html">"Call to Action" "Button"</a>
+    <h1>
+      fresh N fuel
+    </h1>
+    <h2>Find your next stop!</h2>
+    <a href="index.html">Get Started</a>
   </section>
 `;

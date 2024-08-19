@@ -2,7 +2,7 @@ import html from "html-literal";
 export default () => html`
 
 <section id="search">
-<form id="search" method="POST" action=""></form>
+<form id="search" method="POST" action="">
       <h2>Search For Stops</h2>
       <div>
         <label for="state">State</label>
@@ -69,7 +69,7 @@ export default () => html`
         <label for="city">City</label>
         <input type="text" name="city" id="city" placeholder="Enter City"/>
       </div>
-      <input type="submit" value="Search" class="btn btn-primary">
+      <input type="submit" value="Submit" class="btn btn-primary">
     </form>
     </section>
 `;

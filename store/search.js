@@ -1,4 +1,4 @@
 export default {
-  header: "Order a Pizza",
-  view: "order"
+  header: "Search for Stops",
+  view: "search"
 };
