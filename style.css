@@ -44,7 +44,7 @@
 
 #hero h1 {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #fbf0d8;
   text-align: center;
 }
@@ -52,7 +52,7 @@
 #hero a {
   background-color: #b02a29;
   color: #fbf0d8;
-  padding: 10px 20px;
+  padding: 20px 20px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
@@ -60,10 +60,17 @@
 }
 
 .header {
-  background-color: #739ab9;
   color: #fbf0d8;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+}
+
+#hero img {
+  max-width: 350px;
+  border-radius: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form {
@@ -116,28 +123,29 @@ form input[type="submit"]:hover {
 
 footer {
   background-color: #113047;
-  height: 30vh;
+  height: 20vh;
   padding: 10px;
   text-align: center;
+  color: #fbf0d8;
 }
 
-footer p {
+footer #p {
   margin: 0;
   text-align: center;
   align-items: center;
 }
 
-.footer a {
+.footer #p .a {
   color: #fbf0d8;
   text-decoration: none;
 }
 
-.footer a:hover {
+.footer .a:hover {
   text-decoration: underline;
 }
 
 .footer .social-icons {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 #opps404 image {
