@@ -4,7 +4,7 @@ import html from "html-literal";
 export default () => html`
   <section id="about">
     <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-    <!-- <img src="$" alt="fNf logo" /> -->
+    <img src="" alt="" />
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi.
     </p>
@@ -18,5 +18,4 @@ export default () => html`
       laborum illum quos quasi tempora incidunt eius maxime sapiente.
     </p>
   </section>
-  ;
 `;

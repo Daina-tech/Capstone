@@ -1,8 +1,7 @@
 import html from "html-literal";
 export default () => html`
-
-<section id="search">
-<form id="search" method="POST" action="">
+  <section id="search">
+    <form id="search" method="POST" action="">
       <h2>Search For Stops</h2>
       <div>
         <label for="state">State</label>
@@ -51,25 +50,30 @@ export default () => html`
           <option value="SC">South Carolina</option>
           <option value="SD">South Dakota</option>
           <option value="TN">Tennessee</option>
-          <option value="TX">Texas
-          <option value="UT">Utah</option>
+          <option value="TX">Texas </option
+          ><option value="UT">Utah</option>
           <option value="VT">Vermont</option>
           <option value="VA">Virginia</option>
           <option value="WA">Washington</option>
           <option value="WV">West Virginia</option>
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
-        </section>
+        </select>
       </div>
       <div>
         <label for="Interstate Highway">Interstate Highway</label>
-        <input type="text" name="Interstate Highway" id="Interstate Highway" placeholder="Enter Interstate Highway"/>
+        <input
+          type="text"
+          name="Interstate Highway"
+          id="Interstate Highway"
+          placeholder="Enter Interstate Highway"
+        />
       </div>
       <div>
         <label for="city">City</label>
-        <input type="text" name="city" id="city" placeholder="Enter City"/>
+        <input type="text" name="city" id="city" placeholder="Enter City" />
       </div>
-      <input type="submit" value="Submit" class="btn btn-primary">
+      <input type="submit" value="Submit" class="btn btn-primary" />
     </form>
-    </section>
+  </section>
 `;
