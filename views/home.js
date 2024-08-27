@@ -1,5 +1,5 @@
 import html from "html-literal";
-import logoPic from "../public/freshNFuelLogo.PNG";
+import logoPic from "../public/freshNFuelLogo.jpg";
 
 export default state => html`
   <h3>
