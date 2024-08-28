@@ -31,7 +31,7 @@
       <form id="search" method="POST" action=""></form>
       <h2>Search For Stops</h2>
       <div>
-        <label for="state">State</label>
+        <label class="required" for="state">State</label>
         <section id="state" name="state">
           <option value="">Select a State</option>
           <option value="AL">Alabama</option>
@@ -88,8 +88,16 @@
         </section>
       </div>
       <div>
-        <label for="Interstate Highway">Interstate Highway</label>
-        <input type="text" name="Interstate Highway" id="Interstate Highway" placeholder="Enter Interstate Highway"/>
+        <label class="required" for="Interstate Highway">Interstate Highway</label>
+        <section id="Interstate Highway">
+          <option value="">Select an Interstate Highway</option>
+          <option value="I-29">I-29</option>
+          <option value="I-35">I-35</option>
+          <option value="I-44">I-44</option>
+          <option value="I-49">I-49</option>
+          <option value="I-55">I-55</option>
+          <option value="I-70">I-70</option>
+          </section>
       </div>
       <div>
         <label for="city">City</label>

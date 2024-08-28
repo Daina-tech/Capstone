@@ -20,6 +20,7 @@ db.once(
   console.log.bind(console, "Successfully opened connection to Mongo!")
 );
 
+// Logging Middleware
 const logging = (request, response, next) => {
   console.log(
     `${request.method} ${request.url} ${new Date().toLocaleString("en-us")}`
