@@ -4,7 +4,7 @@ export default () => html`
     <form id="search" method="POST" action="">
       <h2>Search For Stops</h2>
       <div>
-        <label for="state">State</label>
+        <label class="required" for="state">State</label>
         <select id="state" name="state" required>
           <option value="">Select a State</option>
           <option value="AL">Alabama</option>
@@ -61,7 +61,9 @@ export default () => html`
         </select>
       </div>
       <div>
-        <label for="Interstate Highway">Interstate Highway</label>
+        <label class="required" for="Interstate Highway"
+          >Interstate Highway</label
+        >
         <input
           type="text"
           name="Interstate Highway"

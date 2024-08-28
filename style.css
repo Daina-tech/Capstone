@@ -121,6 +121,11 @@ form input[type="submit"]:hover {
   background-color: #113047;
 }
 
+.required {
+  content: "*";
+  color: #b02a29;
+}
+
 footer {
   background-color: #113047;
   height: 20vh;
