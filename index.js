@@ -57,7 +57,7 @@ router.hooks({
       case "search" :
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`https://sc-pizza-api.onrender.com/pizzas`)
+          .get(`https://capstone-n6js.onrender.com`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
@@ -92,7 +92,7 @@ router.hooks({
 
 router
 .on({
-  "/": () => render(),
+  "/": () => render(store.home),
   // Use object destructuring assignment to store the data and (query)params from the Navigo match parameter
   // (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   // This reduces the number of checks that need to be performed

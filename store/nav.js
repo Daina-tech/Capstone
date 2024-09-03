@@ -1,5 +1,7 @@
 export default [
   { url: "/home", text: "Home" },
   { url: "/about", text: "About" }, // Take note: the multi-word URLs are kebab case (https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case).
-  { url: "/search", text: "Search" }
+  { url: "/search", text: "Search" },
+  { url: "/createAStop", text: "Create a Stop" },
+  { url: "/contact", text: "Contact" }
 ];
