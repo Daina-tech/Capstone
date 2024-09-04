@@ -54,14 +54,14 @@ router.hooks({
             done();
           });
           break;
-      case "search" :
+      case "stops" :
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`https://capstone-n6js.onrender.com/stops`)
+          .get(`${process.env.FRESH_N_FUEL_API_URL}/stops`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
-            store.search = response.data;
+            store.stops.stops = response.data;
             done();
           })
           .catch((error) => {
@@ -88,7 +88,18 @@ router.hooks({
     document.querySelector(".fa-bars").addEventListener("click", () => {
         document.querySelector("nav > ul").classList.toggle("hidden--mobile");
     });
-    if (view === "search") {}
+    if (view === "search") {
+      document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const inputList = event.target.elements;
+        axios.get(`${process.env.FRESH_N_FUEL_API_URL}/stops?state=${inputList.state.value}`).then(response => {
+          store.stops.stops = response.data;
+          console.log(response);
+          router.navigate("/stops");
+        });
+
+      });
+    }
   }
 });
 

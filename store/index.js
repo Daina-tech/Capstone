@@ -4,3 +4,4 @@ export { default as search } from "./search";
 export { default as createAStop } from "./createAStop";
 export { default as nav } from "./nav";
 export { default as viewNotFound } from "./viewNotFound";
+export { default as stops } from "./stops";

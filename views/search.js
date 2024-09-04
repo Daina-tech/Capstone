@@ -1,6 +1,6 @@
 import html from "html-literal";
 export default () => html`
-  <section id="search">
+  <section id="search-container">
     <form id="search" method="POST" action="">
       <h2>Search For Stops</h2>
       <div>
@@ -66,8 +66,8 @@ export default () => html`
         >
         <input
           type="text"
-          name="Interstate Highway"
-          id="Interstate Highway"
+          name="highway"
+          id="highway"
           placeholder="Enter Interstate Highway"
         />
       </div>
