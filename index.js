@@ -57,7 +57,7 @@ router.hooks({
       case "search" :
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`https://capstone-n6js.onrender.com`)
+          .get(`https://capstone-n6js.onrender.com/stops`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
@@ -81,12 +81,14 @@ router.hooks({
     render(store[view]);
   },
   after: (match) => {
+    const view = match?.data?.view ? camelCase(match.data.view) : "home";
     router.updatePageLinks();
 
     // add menu toggle to bars icon in nav bar
     document.querySelector(".fa-bars").addEventListener("click", () => {
         document.querySelector("nav > ul").classList.toggle("hidden--mobile");
     });
+    if (view === "search") {}
   }
 });
 
