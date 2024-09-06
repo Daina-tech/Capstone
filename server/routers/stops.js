@@ -22,6 +22,22 @@ router.post("/", async (request, response) => {
   }
 });
 
+// Get distinct values for a given field within a collection
+router.get("/values/:field", async (request, response) => {
+  try {
+    const field = request.params.field;
+    const query = Stop.distinct(field, {
+      [field]: { $nin: ["", null] }
+    }).sort();
+
+    const data = await query.exec();
+
+    response.json(data ? data : []);
+  } catch (error) {
+    response.status(500).json(error.message);
+  }
+});
+
 // Get all stops route
 router.get("/", async (request, response) => {
   try {

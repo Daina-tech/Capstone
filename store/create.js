@@ -1,5 +1,5 @@
 export default {
   header: "Create a Stop",
-  view: "createAStop",
+  view: "create",
   stops: []
 };

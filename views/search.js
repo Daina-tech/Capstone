@@ -1,5 +1,5 @@
 import html from "html-literal";
-export default () => html`
+export default state => html`
   <section id="search-container">
     <form id="search" method="POST" action="">
       <h2>Search For Stops</h2>
@@ -64,12 +64,12 @@ export default () => html`
         <label class="required" for="Interstate Highway"
           >Interstate Highway</label
         >
-        <input
-          type="text"
-          name="highway"
-          id="highway"
-          placeholder="Enter Interstate Highway"
-        />
+        <select name="highway" id="highway">
+          <option value="">Select a Highway</option>
+          ${state.highways
+            .map(highway => `<option value="${highway}">${highway}</option>`)
+            .join("")}
+        </select>
       </div>
       <div>
         <label for="city">City</label>
