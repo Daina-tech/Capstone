@@ -24,10 +24,7 @@ const stopSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  direction: {
-    type: String,
-    required: true
-  },
+  direction: [String],
   mileMarker: {
     type: Number,
     required: true
