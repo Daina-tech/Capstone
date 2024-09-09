@@ -1,5 +1,18 @@
 export default {
   header: "Create a Stop",
   view: "create",
-  stops: []
+  stops: [],
+  // fetching stops//
+  form: {
+    name: "",
+    state: "",
+    location: "",
+    highway: "",
+    nearby: "",
+    direction: [],
+    mileMarker: "",
+    type: [],
+    amenities: []
+  }
 };
+// see view\create.js; not able to add a value template literal for state, hwy,//

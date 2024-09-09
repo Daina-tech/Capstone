@@ -61,14 +61,16 @@ export default state => html`
         </select>
       </div>
       <div>
-        <label class="required" for="Interstate Highway"
-          >Interstate Highway</label
-        >
+        <label class="required" for="highway">Interstate Highway</label>
         <select name="highway" id="highway">
           <option value="">Select a Highway</option>
-          ${state.highways
-            .map(highway => `<option value="${highway}">${highway}</option>`)
-            .join("")}
+          ${state.highways && state.highways.length > 0
+            ? state.highways
+                .map(
+                  highway => `<option value="${highway}">${highway}</option>`
+                )
+                .join("")
+            : `<option disabled>No highways available</option>`}
         </select>
       </div>
       <div>
