@@ -63,7 +63,7 @@ router.hooks({
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
-            store.stops.stops = response.data;
+            // store.stops.stops = response.data;
             done();
           })
           .catch((error) => {
@@ -111,10 +111,12 @@ router.hooks({
         let queryParams = [];
         queryParams.push(inputList.state.value.length ? `state=${inputList.state.value}` : "");
         queryParams.push(inputList.highway.value.length ? `highway=${inputList.highway.value}` : "");
+        console.log("queryParams", queryParams);
         let queryString = queryParams.join("&");
+        console.log("queryString", queryString);
           axios.get(`${process.env.FRESH_N_FUEL_API_URL}/stops?${queryString}`).then(response => {
           store.stops.stops = response.data;
-          console.log(response);
+          console.log(response.data);
           router.navigate("/stops");
         });
 

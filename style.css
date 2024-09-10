@@ -120,11 +120,11 @@ footer #p {
   margin-top: 30px;
 }
 
-#opps404 image {
-  max-width: 40%;
+#opps404 .image {
+  max-width: 600px;
   height: auto;
   display: block;
-  margin-left: 30%;
+
 }
 
 #opps404 .attribution {
