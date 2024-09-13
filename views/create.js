@@ -4,8 +4,7 @@ export default state =>
   html`
     <section id="create">
       <form id="create-post" method="POST" action="">
-        <h2>Create a Stop</h2>
-        <h3>Add a new stop to the database</h3>
+        <h2>Add A New Stop Not Listed</h2>
         <div>
           <label class="required" for="state">State</label>
           <select id="state" name="state">
@@ -74,7 +73,6 @@ export default state =>
             required
           />
         </div>
-
         <!-- Highways -->
         <div>
           <label for="highways">Highway:</label>
@@ -89,7 +87,8 @@ export default state =>
           </datalist>
         </div>
         <div>
-          <label for="direction">Direction:</label>
+          <h3>Direction:</h3>
+          <label for="direction">Eastbound:</label>
           <input
             type="checkbox"
             id="id_of_checkbox1"
@@ -97,7 +96,7 @@ export default state =>
             name="direction"
             value="${state.form.direction}"
           />
-          <label for="direction">Eastbound:</label>
+          <label for="direction">Westbound:</label>
           <input
             type="checkbox"
             id="id_of_checkbox2"
@@ -105,7 +104,7 @@ export default state =>
             name="direction"
             value="${state.form.direction}"
           />
-          <label for="direction">Westbound:</label>
+          <label for="direction">Northbound:</label>
           <input
             type="checkbox"
             id="id_of_checkbox3"
@@ -113,7 +112,7 @@ export default state =>
             name="direction"
             value="${state.form.direction}"
           />
-          <label for="direction">Northbound:</label>
+          <label for="direction">Southbound:</label>
           <input
             type="checkbox"
             id="id_of_checkbox4"
@@ -121,18 +120,10 @@ export default state =>
             name="direction"
             value="${state.form.direction}"
           />
-          <label for="direction">Southbound:</label>
-          <input
-            type="checkbox"
-            id="id_of_checkbox5"
-            class="items1"
-            name="direction"
-            value="${state.form.direction}"
-          />
           <label for="direction">Center:</label>
           <input
             type="checkbox"
-            id="id_of_checkbox6"
+            id="id_of_checkbox5"
             class="items1"
             name="direction"
             value="${state.form.direction}"
@@ -173,7 +164,8 @@ export default state =>
           />
         </div>
         <div>
-          <label for="amenities">Amenities:</label>
+          <h3>Amenities:</h3>
+          <label for="amenity1">Food</label>
           <input
             type="checkbox"
             id="id_of_checkbox1"
@@ -181,7 +173,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity1">Food</label>
+          <label for="amenity2">Vending Machines</label>
           <input
             type="checkbox"
             id="id_of_checkbox2"
@@ -189,7 +181,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity2">Vending Machines</label>
+          <label for="amenity3">Restroom</label>
           <input
             type="checkbox"
             id="id_of_checkbox3"
@@ -197,7 +189,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity3">Restroom</label>
+          <label for="amenity4">Shower</label>
           <input
             type="checkbox"
             id="id_of_checkbox4"
@@ -205,7 +197,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity4">Shower</label>
+          <label for="amenity5">Family Restroom</label>
           <input
             type="checkbox"
             id="id_of_checkbox5"
@@ -213,7 +205,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity5">Family Restroom</label>
+          <label for="amenity6">Children Play Area</label>
           <input
             type="checkbox"
             id="id_of_checkbox6"
@@ -221,7 +213,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity6">Children Play Area</label>
+          <label for="amenity7">Pet Area</label>
           <input
             type="checkbox"
             id="id_of_checkbox7"
@@ -229,7 +221,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity7">Pet Area</label>
+          <label for="amenity8">Parking</label>
           <input
             type="checkbox"
             id="id_of_checkbox8"
@@ -237,7 +229,7 @@ export default state =>
             name="amenities"
             value="${state.form.amenities}"
           />
-          <label for="amenity8">Parking</label>
+          <label for="amenity9">Fuel</label>
           <input
             type="checkbox"
             id="id_of_checkbox9"
@@ -246,7 +238,7 @@ export default state =>
             value="${state.form.amenities}"
           />
         </div>
-        <div>
+        <!-- <div>
           <label for="type">Type of Stop:</label>
           <input
             type="checkbox"
@@ -271,7 +263,7 @@ export default state =>
             name="type"
             value="${state.form.type}"
           />
-        </div>
+        </div> -->
         <input type="submit" name="create" value="Create A Stop" />
       </form>
     </section>

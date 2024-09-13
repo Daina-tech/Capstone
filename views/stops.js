@@ -3,14 +3,14 @@ export default state =>
   html`
     <table id="stops">
       <tr>
-        <th>Name</th>
-        <th>State</th>
-        <th>Location</th>
-        <th>Highway</th>
-        <th>City Nearby</th>
-        <th>Direction</th>
-        <th>Mile Marker</th>
-        <th>Amenities</th>
+        <th scope="col">Name</th>
+        <th scope="col">State</th>
+        <th scope="col">Location</th>
+        <th scope="col">Highway</th>
+        <th scope="col">City Nearby</th>
+        <th scope="col">Direction</th>
+        <th scope="col">Mile Marker</th>
+        <th scope="col">Amenities</th>
       </tr>
       ${state.stops
         .map(
