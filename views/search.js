@@ -4,7 +4,7 @@ export default state => html`
     <form id="search" method="POST" action="">
       <h2>Search For Stops</h2>
       <div>
-        <label class="required" for="state">State</label>
+        <label class="required" for="state">State:*</label>
         <select id="state" name="state" required>
           <option value="">Select a State</option>
           <option value="Alabama">Alabama</option>
@@ -61,7 +61,7 @@ export default state => html`
         </select>
       </div>
       <div>
-        <label class="required" for="highway">Interstate Highway</label>
+        <label class="required" for="highway">Interstate Highway:*</label>
         <select name="highway" id="highway">
           <option value="">Select a Highway</option>
           ${state.highways && state.highways.length > 0
@@ -74,7 +74,7 @@ export default state => html`
         </select>
       </div>
       <div>
-        <label for="city">City</label>
+        <label for="city">City:</label>
         <input type="text" name="city" id="city" placeholder="Enter City" />
       </div>
       <input type="submit" value="Submit" class="btn btn-primary" />

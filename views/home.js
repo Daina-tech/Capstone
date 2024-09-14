@@ -6,7 +6,8 @@ export default state => html`
     <section id="weather">
       <div>
         <h3>
-          The weather in ${state.weather.city} is ${state.weather.description}.
+          <i class="fa-solid fa-temperature-half" style="color: #b91604;"></i
+          >The weather in ${state.weather.city} is ${state.weather.description}.
           Temperature is ${state.weather.temp}F, and it feels like
           ${state.weather.feelsLike}F.
         </h3>

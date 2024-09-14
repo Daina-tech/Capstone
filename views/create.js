@@ -4,9 +4,9 @@ export default state =>
   html`
     <section id="create">
       <form id="create-post" method="POST" action="">
-        <h2>Add A New Stop Not Listed</h2>
+        <h2>Add A New Stop Not Listed !</h2>
         <div>
-          <label class="required" for="state">State</label>
+          <label class="required" for="state">State:*</label>
           <select id="state" name="state">
             <option value="">Select a State</option>
             <option value="Alabama">Alabama</option>
@@ -63,7 +63,7 @@ export default state =>
           </select>
         </div>
         <div>
-          <label for="name">Name:</label>
+          <label class="required" for="name">Name:*</label>
           <input
             type="text"
             name="name"
@@ -75,7 +75,7 @@ export default state =>
         </div>
         <!-- Highways -->
         <div>
-          <label for="highways">Highway:</label>
+          <label class="required" for="highways">Highway:*</label>
           <input list="highways" name="highways" id="highways" required />
           <datalist id="highways">
             <option value="I-29"></option>
@@ -87,7 +87,7 @@ export default state =>
           </datalist>
         </div>
         <div>
-          <h3>Direction:</h3>
+          <h4 class="required">Direction:*</h4>
           <label for="direction">Eastbound:</label>
           <input
             type="checkbox"
@@ -130,7 +130,7 @@ export default state =>
           />
         </div>
         <div>
-          <label for="nearby">Nearby City:</label>
+          <label class="required" for="nearby">Nearby City:*</label>
           <input
             type="text"
             name="nearby"
@@ -149,7 +149,6 @@ export default state =>
             placeholder="Enter
           Mile Marker"
             value="${state.form.mileMarker}"
-            required
           />
         </div>
         <div>
@@ -164,7 +163,7 @@ export default state =>
           />
         </div>
         <div>
-          <h3>Amenities:</h3>
+          <h4 class="required">Amenities:*</h4>
           <label for="amenity1">Food</label>
           <input
             type="checkbox"
