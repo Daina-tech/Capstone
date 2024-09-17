@@ -180,36 +180,30 @@ form input[type="submit"]:hover {
 }
 
 #stops {
-  background-color: #fbf0d8;
+  background-color: #739ab9;
   color: #b02a29;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 70vh;
-  border-radius: 2%;
-  text-align: left;
+  display:flex;
+  height: 100vh;
+  margin: auto;
 }
 
-tr {
-  border: solid 1px #333;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-  height: 80%;
+table {
+  background-color: #fbf0d8;
+  color: #b02a29;
+  border: solid 2px #333;
+  border-radius: 15px;
+  height: auto;
   width: 100%;
+  margin: auto;
+  padding: 20px 10px 20px;
 }
 
 th {
-  display: flex;
-  flex-direction:column;
-  justify-content: space-between;
-  width: 100%;
-}
-
-#col {
-  border: solid 1px #333;
-  display: flex;
-  flex-direction:column;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  font-size: larger;
+  border-bottom: 1px solid #333;
 }
 
 * footer {
