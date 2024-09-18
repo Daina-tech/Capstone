@@ -18,7 +18,7 @@ export default state => html`
         <img src="${logoPic}" alt="home image" />
       </h2>
       <h1 id="hero-heading">
-        Welcome to fresh N fuel
+        Welcome To fresh N fuel
       </h1>
       <h2 id="start">Find your next stop to reFRESH & reFUEL!</h2>
       <a href="/search">Get Started</a>
