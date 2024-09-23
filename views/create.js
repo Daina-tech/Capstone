@@ -68,7 +68,7 @@ export default state =>
             type="text"
             name="name"
             id="name"
-            placeholder="Enter name of stop"
+            placeholder="Enter Name of Stop"
             value="${state.form.name}"
             required
           />
@@ -87,7 +87,7 @@ export default state =>
           </datalist>
         </div>
         <div>
-          <h4 class="required">Direction:*</h4>
+          <h3 class="required">Direction:*</h3>
           <label for="direction">Eastbound:</label>
           <input
             type="checkbox"
@@ -146,8 +146,7 @@ export default state =>
             type="number"
             name="mile-marker"
             id="mile-marker"
-            placeholder="Enter
-          Mile Marker"
+            placeholder="Enter Mile Marker"
             value="${state.form.mileMarker}"
           />
         </div>
@@ -157,8 +156,7 @@ export default state =>
             type="number"
             name="location"
             id="location"
-            placeholder="Enter
-          Coordinates"
+            placeholder="Enter Coordinates"
             value="${state.form.location}"
           />
         </div>

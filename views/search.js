@@ -7,57 +7,59 @@ export default state => html`
         <label class="required" for="state">State:*</label>
         <select id="state" name="state" required>
           <option value="">Select a State</option>
-          <option value="Alabama">Alabama</option>
-          <option value="Alaska">Alaska</option>
-          <option value="Arizona">Arizona</option>
-          <option value="Arkansas">Arkansas</option>
-          <option value="California">California</option>
-          <option value="Colorado">Colorado</option>
-          <option value="Connecticut">Connecticut</option>
-          <option value="Delaware">Delaware</option>
-          <option value="District of Columbia">District Of Columbia</option>
-          <option value="Florida">Florida</option>
-          <option value="Georgia">Georgia</option>
-          <option value="Hawaii">Hawaii</option>
-          <option value="Idaho">Idaho</option>
-          <option value="Illinois">Illinois</option>
-          <option value="Indiana">Indiana</option>
-          <option value="Iowa">Iowa</option>
-          <option value="Kansas">Kansas</option>
-          <option value="Kentucky">Kentucky</option>
-          <option value="Louisiana">Louisiana</option>
-          <option value="Maine">Maine</option>
-          <option value="Maryland">Maryland</option>
-          <option value="Massachusetts">Massachusetts</option>
-          <option value="Michigan">Michigan</option>
-          <option value="Minnesota">Minnesota</option>
-          <option value="Mississippi">Mississippi</option>
-          <option value="Missouri">Missouri</option>
-          <option value="Montana">Montana</option>
-          <option value="Nebraska">Nebraska</option>
-          <option value="Nevada">Nevada</option>
-          <option value="New Hampshire">New Hampshire</option>
-          <option value="New Jersey">New Jersey</option>
-          <option value="New Mexico">New Mexico</option>
-          <option value="New York">New York</option>
-          <option value="North Carolina">North Carolina</option>
-          <option value="North Dakota">North Dakota</option>
-          <option value="Ohio">Ohio</option>
-          <option value="Oklahoma">Oklahoma</option>
-          <option value="Oregon">Oregon</option>
-          <option value="Pennsylvania">Pennsylvania</option>
-          <option value="Rhode Island">Rhode Island</option>
-          <option value="South Carolina">South Carolina</option>
-          <option value="South Dakota">South Dakota</option>
-          <option value="Tennessee">Tennessee</option>
-          <option value="Texas">Texas </option
-          ><option value="Utah">Utah</option>
-          <option value="Vermont">Vermont</option>
-          <option value="Virginia">Virginia</option>
-          <option value="Washington">Washington</option>
-          <option value="West Virginia">West Virginia</option>
-          <option value="Wisconsin">Wisconsin</option>
-          <option value="Wyoming">Wyoming</option>
+          <option value="Alabama" disabled>Alabama</option>
+          <option value="Alaska" disabled>Alaska</option>
+          <option value="Arizona" disabled>Arizona</option>
+          <option value="Arkansas" disabled>Arkansas</option>
+          <option value="California" disabled>California</option>
+          <option value="Colorado" disabled>Colorado</option>
+          <option value="Connecticut" disabled>Connecticut</option>
+          <option value="Delaware" disabled>Delaware</option>
+          <option value="District of Columbia" disabled
+            >District Of Columbia</option
+          >
+          <option value="Florida" disabled>Florida</option>
+          <option value="Georgia" disabled>Georgia</option>
+          <option value="Hawaii" disabled>Hawaii</option>
+          <option value="Idaho" disabled>Idaho</option>
+          <option value="Illinois" disabled>Illinois</option>
+          <option value="Indiana" disabled>Indiana</option>
+          <option value="Iowa" disabled>Iowa</option>
+          <option value="Kansas" disabled>Kansas</option>
+          <option value="Kentucky" disabled>Kentucky</option>
+          <option value="Louisiana" disabled>Louisiana</option>
+          <option value="Maine" disabled>Maine</option>
+          <option value="Maryland" disabled>Maryland</option>
+          <option value="Massachusetts" disabled>Massachusetts</option>
+          <option value="Michigan" disabled>Michigan</option>
+          <option value="Minnesota" disabled>Minnesota</option>
+          <option value="Mississippi" disabled>Mississippi</option>
+          <option value="Missouri" class="available">Missouri</option>
+          <option value="Montana" disabled>Montana</option>
+          <option value="Nebraska" disabled>Nebraska</option>
+          <option value="Nevada" disabled>Nevada</option>
+          <option value="New Hampshire" disabled>New Hampshire</option>
+          <option value="New Jersey" disabled>New Jersey</option>
+          <option value="New Mexico" disabled>New Mexico</option>
+          <option value="New York" disabled>New York</option>
+          <option value="North Carolina" disabled>North Carolina</option>
+          <option value="North Dakota" disabled>North Dakota</option>
+          <option value="Ohio" disabled>Ohio</option>
+          <option value="Oklahoma" disabled>Oklahoma</option>
+          <option value="Oregon" disabled>Oregon</option>
+          <option value="Pennsylvania" disabled>Pennsylvania</option>
+          <option value="Rhode Island" disabled>Rhode Island</option>
+          <option value="South Carolina" disabled>South Carolina</option>
+          <option value="South Dakota" disabled>South Dakota</option>
+          <option value="Tennessee" disabled>Tennessee</option>
+          <option value="Texas" disabled>Texas </option
+          ><option value="Utah" disabled>Utah</option>
+          <option value="Vermont" disabled>Vermont</option>
+          <option value="Virginia" disabled>Virginia</option>
+          <option value="Washington" disabled>Washington</option>
+          <option value="West Virginia" disabled>West Virginia</option>
+          <option value="Wisconsin" disabled>Wisconsin</option>
+          <option value="Wyoming" disabled>Wyoming</option>
         </select>
       </div>
       <div>
@@ -75,7 +77,13 @@ export default state => html`
       </div>
       <div>
         <label for="city">City:</label>
-        <input type="text" name="city" id="city" placeholder="Enter City" />
+        <input
+          type="text"
+          name="city"
+          id="city"
+          row="2"
+          placeholder="Enter City"
+        />
       </div>
       <input type="submit" value="Submit" class="btn btn-primary" />
     </form>
