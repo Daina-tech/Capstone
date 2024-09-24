@@ -37,6 +37,54 @@
   text-align: center;
 }
 
+.container {
+  height: 0;
+  width: 0;
+}
+
+* .box {
+  background-color: #fbf0d8;
+  color: #333;
+  justify-content: center;
+  text-align:center;
+  border: #113047 2px solid;
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+  z-index: 3;
+
+}
+
+.box-1 {
+  position: relative;
+  top: 180px;
+  left: 280px;
+  border-radius: 20px 0 20px 0
+}
+
+.box-2 {
+  position: relative;
+  bottom: -190px;
+  left: 490px;
+  border-radius: 20px 0 20px 0;
+
+}
+
+.box-3 {
+  position: relative;
+  top: -150px;
+  right: 480px;
+  border-radius: 0 20px 0 20px;
+
+}
+
+.box-4 {
+  position: relative;
+  bottom: 140px;
+  right: 710px;
+  border-radius: 0 20px 0 20px;
+}
+
 /* #nav-header {
   background-color: #b02a29;
   color: #fbf0d8;
@@ -196,6 +244,10 @@ input #city {
   font-weight: bold;
 }
 
+#stops * {
+border: #b02a29 1px solid;
+}
+
 #stops {
   background-color: #739ab9;
   color: #b02a29;
@@ -212,7 +264,7 @@ table {
   height: auto;
   width: 100%;
   margin: auto;
-  padding: 20px 10px 20px;
+  padding: 20px 10px;
 }
 
 th {
@@ -225,7 +277,7 @@ th {
 
 * footer {
   background-color: #113047;
-  height: 25vh;
+  height: auto;
   padding: 10px;
   text-align: center;
   justify-content:space-around;
@@ -360,6 +412,10 @@ footer .social {
     justify-content: center;
     width: 150px;
     margin: 10px 0 10px 30px;
+  }
+
+  table {
+   width: 100%;
   }
 }
 

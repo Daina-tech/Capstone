@@ -14,6 +14,12 @@ export default state => html`
       </div>
     </section>
     <section id="hero">
+      <section class="container">
+        <div class="box box-1"><p>Long Haul Drivers</p></div>
+        <div class="box box-2"><p>Road-trip Adventurers</p></div>
+        <div class="box box-3"><p>Van-life Dwellers</p></div>
+        <div class="box box-4"><p>RV Roadsters</p></div>
+      </section>
       <h2 id="home-heading">
         <img src="${logoPic}" alt="home image" />
       </h2>
