@@ -1,17 +1,22 @@
 export default {
   view: "create",
   stops: [],
-  // fetching stops//
+  // add non listed stops//
   form: {
-    name: "",
     state: "",
-    location: "",
+    name: "",
     highway: "",
-    nearby: "",
     direction: [],
+    nearby: "",
     mileMarker: "",
-    type: [],
+    location: "",
     amenities: []
   }
 };
+
 // see view\create.js; not able to add a value template literal for state, hwy,//
+
+// type: [],
+// removed
+
+// updated order of form

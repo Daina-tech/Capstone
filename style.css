@@ -32,6 +32,16 @@
   background-color: #113047;
 }
 
+.hero-attribution {
+  background-color: #739ab9;
+  font-size: small;
+  padding: 5px 5px 5px 10px;
+}
+
+.hero-attribution a:hover {
+  color: #333;
+}
+
 .header {
   color: #fbf0d8;
   text-align: center;
@@ -43,11 +53,8 @@
 }
 
 * .box {
-  background-color: #fbf0d8;
   color: #333;
   justify-content: center;
-  text-align:center;
-  border: #113047 2px solid;
   margin: 10px;
   width: 200px;
   height: 150px;
@@ -57,25 +64,52 @@
 
 .box-1 {
   position: relative;
-  top: 180px;
-  left: 280px;
-  border-radius: 20px 0 20px 0
+  top: 120px;
+  left: 220px;
+}
+
+.box-1 p {
+  text-align: right;
+}
+
+#home-box1 img {
+  width: 60px;
+  height: 50px;
+  justify-content: center;
 }
 
 .box-2 {
   position: relative;
   bottom: -190px;
-  left: 490px;
+  left: 390px;
   border-radius: 20px 0 20px 0;
+}
 
+.box-2 p {
+  text-align: right;
+}
+
+#home-box2 img {
+  width: 60px;
+  height: 50px;
+  justify-content: center;
 }
 
 .box-3 {
   position: relative;
-  top: -150px;
-  right: 480px;
+  top: -200px;
+  right: 500px;
   border-radius: 0 20px 0 20px;
+}
 
+.box-3 p {
+  text-align: right;
+}
+
+#home-box3 img {
+  width: 60px;
+  height: 50px;
+  justify-content: center;
 }
 
 .box-4 {
@@ -83,6 +117,16 @@
   bottom: 140px;
   right: 710px;
   border-radius: 0 20px 0 20px;
+}
+
+.box-4 p {
+  text-align: right;
+}
+
+#home-box4 img {
+  width: 60px;
+  height: 50px;
+  justify-content: center;
 }
 
 /* #nav-header {
@@ -178,62 +222,61 @@ div#root {
   font-weight: bold;
 }
 
-#search .available {
-  font-weight: 200 ;
-}
-
 form {
   max-width: 600px;
   margin: 0 auto;
   padding: 30px;
   background-color: #fbf0d8;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px #333;
-  border: solid 1px #333;
-}
-
-form * {
-  margin-bottom: 30px;
-  justify-content: center;
-}
-
-form {
   border: solid 1px #333;
   display: flex;
   flex-direction: column;
 }
 
+form * {
+  margin-bottom: 40px;
+}
+
+form h2 {
+  color: #333;
+  text-align: center;
+}
+
 form label {
-  display: block;
   font-weight: bold;
+  justify-content: space-between;
+  margin: 5px 5px;
 }
 
 form input[type="text"] {
-  width: 100%;
+  width: 50%;
   border-radius: 5px;
   border: 1px solid #ccc;
+
 }
 
 form input[type="submit"] {
   background-color: #b02a29;
   color: #fbf0d8;
   padding: 10px 20px;
+  margin-left: 25%;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  width: 300px;
+  display:block;
 }
 
 form input[type="submit"]:hover {
   background-color: #113047;
 }
 
-input #city {
-  height: 20%;
-}
-
 .required {
   content: "*";
   color: #b02a29;
+  font-size: larger;
+  border-bottom: #333 1px dotted;
 }
 
 #create {

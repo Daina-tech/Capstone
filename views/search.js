@@ -74,7 +74,7 @@ export default state => html`
         </select>
       </div>
       <div>
-        <label for="city">City:</label>
+        <label class="required" for="city">City:</label>
         <input type="text" name="city" id="city" placeholder="Enter City" />
       </div>
       <input type="submit" value="Submit" class="btn btn-primary" />

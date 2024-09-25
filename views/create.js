@@ -4,7 +4,7 @@ export default state =>
   html`
     <section id="create">
       <form id="create-post" method="POST" action="">
-        <h2>Add A New Stop Not Listed !</h2>
+        <h2>Add A New Stop</h2>
         <div>
           <label class="required" for="state">State:*</label>
           <select id="state" name="state">
@@ -87,7 +87,7 @@ export default state =>
           </datalist>
         </div>
         <div>
-          <h3 class="required">Direction:*</h3>
+          <label class="required">Direction:</label>
           <label for="direction">Eastbound:</label>
           <input
             type="checkbox"
@@ -141,7 +141,7 @@ export default state =>
           />
         </div>
         <div>
-          <label for="mile-marker">Mile marker:</label>
+          <label class="required" for="mile-marker">Mile marker:</label>
           <input
             type="number"
             name="mile-marker"
@@ -151,7 +151,7 @@ export default state =>
           />
         </div>
         <div>
-          <label for="location">Location:</label>
+          <label class="required" for="location">Location:</label>
           <input
             type="number"
             name="location"
@@ -161,7 +161,7 @@ export default state =>
           />
         </div>
         <div>
-          <h4 class="required">Amenities:*</h4>
+          <label class="required">Amenities:*</label>
           <label for="amenity1">Food</label>
           <input
             type="checkbox"
