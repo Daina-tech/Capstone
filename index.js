@@ -76,6 +76,7 @@ router.hooks({
           .get(`${process.env.FRESH_N_FUEL_API_URL}/stops/values/highway`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            console.log ("searching for stops");
             console.log("response", response);
             store.search.highways = response.data;
             done();
@@ -104,33 +105,47 @@ router.hooks({
     document.querySelector(".fa-bars").addEventListener("click", () => {
         document.querySelector("nav > ul").classList.toggle("hidden--mobile");
     });
+
     if (view === "search") {
       document.querySelector("form").addEventListener("submit", (event) => {
         event.preventDefault();
 
         const inputList = event.target.elements;
         let queryParams = [];
+
         queryParams.push(inputList.state.value.length ? `state=${inputList.state.value}` : "");
+
         queryParams.push(inputList.highway.value.length ? `highway=${inputList.highway.value}` : "");
+
         console.log("queryParams", queryParams);
         let queryString = queryParams.join("&");
         console.log("queryString", queryString);
+        console.log ("searching")
 
           axios.get(`${process.env.FRESH_N_FUEL_API_URL}/stops?${queryString}`).then(response => {
           store.stops.stops = response.data;
           console.log(response.data);
           router.navigate("/stops");
+      })
+    });
 
+          if (view === "create") {
+            console.log("this is the create page")
+            document.querySelector("form").addEventListener("submit", (event) => {
+              event.preventDefault();
+          console.log("creating a stop")
           axios.post(`${process.env.FRESH_N_FUEL_API_URL}/stops`,requestData)
-          .then(response => {store.stop.stops.push(response.data);
-            router.navigate("/stop");
+            .then(response => {store.stop.stops.push(response.data);
+              router.navigate("/stops");
+            })
+            .catch(error => {
+              console.log("It puked", error);
+            });
           })
-          .catch(error => {
-            console.log("It puked", error);
-          });
-        });
 
-      });
+
+          }
+
     }
   }
 });
