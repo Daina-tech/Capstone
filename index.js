@@ -107,6 +107,7 @@ router.hooks({
     if (view === "search") {
       document.querySelector("form").addEventListener("submit", (event) => {
         event.preventDefault();
+
         const inputList = event.target.elements;
         let queryParams = [];
         queryParams.push(inputList.state.value.length ? `state=${inputList.state.value}` : "");
@@ -114,10 +115,19 @@ router.hooks({
         console.log("queryParams", queryParams);
         let queryString = queryParams.join("&");
         console.log("queryString", queryString);
+
           axios.get(`${process.env.FRESH_N_FUEL_API_URL}/stops?${queryString}`).then(response => {
           store.stops.stops = response.data;
           console.log(response.data);
           router.navigate("/stops");
+
+          axios.post(`${process.env.FRESH_N_FUEL_API_URL}/stops`,requestData)
+          .then(response => {store.stop.stops.push(response.data);
+            router.navigate("/stop");
+          })
+          .catch(error => {
+            console.log("It puked", error);
+          });
         });
 
       });
