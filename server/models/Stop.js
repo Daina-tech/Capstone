@@ -10,11 +10,8 @@ const stopSchema = new mongoose.Schema({
     required: true
   },
   location: {
-    type: "Point",
-    coordinates: {
-      type: [Number],
-      required: true
-    }
+    type: [Number],
+    required: false
   },
   highway: {
     type: String,
@@ -24,18 +21,10 @@ const stopSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  direction: {
-    type: String,
-    required: true
-  },
+  direction: [String],
   mileMarker: {
     type: Number,
-    required: true
-  },
-  type: [String],
-  spaces: {
-    type: Number,
-    required: true
+    required: false
   },
   amenities: [String]
 });

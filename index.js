@@ -7,6 +7,7 @@ import axios from "axios";
 const router = new Navigo("/");
 
 function render(state = store.home) {
+  console.log("state", state);
   document.querySelector("#root").innerHTML = `
       ${header(state)}
       ${nav(store.nav)}
@@ -54,14 +55,30 @@ router.hooks({
             done();
           });
           break;
-      case "search" :
+      case "stops" :
+
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`https://sc-pizza-api.onrender.com/pizzas`)
+          .get(`${process.env.FRESH_N_FUEL_API_URL}/stops`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
-            store.search = response.data;
+            // store.stops.stops = response.data;
+            done();
+          })
+          .catch((error) => {
+            console.log("It puked", error);
+            done();
+          });
+          break;
+        case "search" :
+          axios
+          .get(`${process.env.FRESH_N_FUEL_API_URL}/stops/values/highway`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            console.log ("searching for stops");
+            console.log("response", response);
+            store.search.highways = response.data;
             done();
           })
           .catch((error) => {
@@ -81,18 +98,61 @@ router.hooks({
     render(store[view]);
   },
   after: (match) => {
+    const view = match?.data?.view ? camelCase(match.data.view) : "home";
     router.updatePageLinks();
 
     // add menu toggle to bars icon in nav bar
     document.querySelector(".fa-bars").addEventListener("click", () => {
         document.querySelector("nav > ul").classList.toggle("hidden--mobile");
     });
+
+    if (view === "search") {
+      document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const inputList = event.target.elements;
+        let queryParams = [];
+
+        queryParams.push(inputList.state.value.length ? `state=${inputList.state.value}` : "");
+
+        queryParams.push(inputList.highway.value.length ? `highway=${inputList.highway.value}` : "");
+
+        console.log("queryParams", queryParams);
+        let queryString = queryParams.join("&");
+        console.log("queryString", queryString);
+        console.log ("searching")
+
+          axios.get(`${process.env.FRESH_N_FUEL_API_URL}/stops?${queryString}`).then(response => {
+          store.stops.stops = response.data;
+          console.log(response.data);
+          router.navigate("/stops");
+      })
+    });
+
+          if (view === "create") {
+            console.log("this is the create page")
+            document.querySelector("form").addEventListener("submit", (event) => {
+              event.preventDefault();
+          console.log("creating a stop")
+          axios.post(`${process.env.FRESH_N_FUEL_API_URL}/stops`,requestData)
+            .then(response => {store.stop.stops.push(response.data);
+              router.navigate("/stops");
+            })
+            .catch(error => {
+              console.log("It puked", error);
+            });
+          })
+
+
+          }
+
+    }
   }
 });
 
 router
 .on({
-  "/": () => render(),
+  "/": () => render(store.home),
   // Use object destructuring assignment to store the data and (query)params from the Navigo match parameter
   // (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   // This reduces the number of checks that need to be performed
