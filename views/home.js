@@ -43,12 +43,15 @@ export default state => html`
         Welcome To fresh N fuel
       </h1>
       <h2 id="start">Find your next stop to reFRESH & reFUEL!</h2>
-      <a href="/search">Get Started</a>
+      <a href="/search" class="hero-btn">Get Started</a>
     </section>
-    <div class="hero-attribution">
-      <a href="https://www.freepik.com" target="_blank">
-        Images designed by Freepik
-      </a>
-    </div>
+    <section>
+      <div class="hero-attribution">
+        Logo designed by Kaiane Studios,
+        <a href="https://www.freepik.com" target="_blank">
+          Images designed by Freepik
+        </a>
+      </div>
+    </section>
   </section>
 `;

@@ -5,3 +5,4 @@ export { default as create } from "./create";
 export { default as nav } from "./nav";
 export { default as viewNotFound } from "./viewNotFound";
 export { default as stops } from "./stops";
+export { default as contact } from "./contact";

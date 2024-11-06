@@ -77,7 +77,7 @@ export default state => html`
         <label class="required" for="city">City:</label>
         <input type="text" name="city" id="city" placeholder="Enter City" />
       </div>
-      <input type="submit" value="Submit" class="btn btn-primary" />
+      <input type="submit" value="Submit" class="stop" />
     </form>
   </section>
 `;

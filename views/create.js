@@ -261,7 +261,7 @@ export default state =>
             value="${state.form.type}"
           />
         </div> -->
-        <input type="submit" value="create" />
+        <input type="submit" value="submit" class="stop" />
       </form>
     </section>
   `;

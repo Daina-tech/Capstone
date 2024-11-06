@@ -1,3 +1,12 @@
+body #root {
+  color: #b02a29;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Hero */
 #hero {
   background-color: #739ab9;
   color: #fbf0d8;
@@ -17,7 +26,7 @@
   text-align: center;
 }
 
-#hero a {
+.hero-btn {
   background-color: #b02a29;
   color: #fbf0d8;
   padding: 20px 20px;
@@ -26,28 +35,33 @@
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
+  margin-top: auto;
 }
 
-#hero a:hover {
+.hero-btn:hover {
   background-color: #113047;
 }
 
 .hero-attribution {
   background-color: #739ab9;
-  font-size: small;
   padding: 5px 5px 5px 10px;
   z-index: 2;
+  color: #113047;
+  font-size: x-small;
+  text-decoration: none;
 }
 
 .hero-attribution a:hover {
   color: #333;
-}
+ }
+
 
 .header {
   color: #fbf0d8;
   text-align: center;
 }
 
+/* Hero Images */
 .container {
   height: 0;
   width: 0;
@@ -60,11 +74,10 @@
   width: 200px;
   height: 150px;
   z-index: 3;
-
 }
 
 .box-1 {
-  position: relative;
+  position:relative;
   top: 120px;
   left: 220px;
 }
@@ -80,7 +93,7 @@
 }
 
 .box-2 {
-  position: relative;
+  position:relative;
   bottom: -190px;
   left: 390px;
   border-radius: 20px 0 20px 0;
@@ -97,7 +110,7 @@
 }
 
 .box-3 {
-  position: relative;
+  position:relative;
   top: -200px;
   right: 500px;
   border-radius: 0 20px 0 20px;
@@ -114,7 +127,7 @@
 }
 
 .box-4 {
-  position: relative;
+  position:relative;
   bottom: 140px;
   right: 710px;
   border-radius: 0 20px 0 20px;
@@ -151,6 +164,7 @@ div#root {
   color: #b02a29;
 }
 
+/* Weather API */
 #weather {
   background-color: #fbf0d8;
   color: #b02a29;
@@ -161,6 +175,7 @@ div#root {
   padding-left: 20px;
 }
 
+/* About */
 #about {
   background-color: #fbf0d8;
   color: #b02a29;
@@ -215,6 +230,7 @@ div#root {
   flex-direction: column;
 }
 
+/* Search */
 #search-container {
   background-color: #739ab9;
   height: 50vh;
@@ -223,6 +239,7 @@ div#root {
   font-weight: bold;
 }
 
+/* Forms */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -261,7 +278,6 @@ form input[type="submit"] {
   background-color: #b02a29;
   color: #fbf0d8;
   padding: 10px 20px;
-  margin-left: 25%;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
@@ -273,13 +289,17 @@ form input[type="submit"]:hover {
   background-color: #113047;
 }
 
+.stop{
+  margin-left: 25%;
+}
+
 .required {
   content: "*";
   color: #b02a29;
   font-size: larger;
-  border-bottom: #333 1px dotted;
 }
 
+/* Create */
 #create {
   background-color: #739ab9;
   color: #333;
@@ -288,6 +308,7 @@ form input[type="submit"]:hover {
   font-weight: bold;
 }
 
+/* Stops */
 #stops * {
 border: #b02a29 1px solid;
 }
@@ -319,33 +340,116 @@ th {
   border-bottom: 1px solid #333;
 }
 
+/* Contact */
+
+* .contact {
+  background-color: #739ab9;
+  color:#fbf0d8;
+  margin: 0 0;
+  padding:20px 30px 20px;
+}
+
+.contact-items {
+  display:flex;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin:50px 20px 50px 190px;
+}
+
+.contact img {
+  width: 450px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+}
+
+.form-contact {
+  padding:0 0;
+  margin: 10px 10px;
+  width: 400px;
+}
+
+.form-contact input{
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  outline: #333;
+}
+
+.form-contact #name-contact{
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  outline: #333;
+}
+
+.form-contact #email-contact{
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  outline: #333;
+}
+
+.form-contact #message-contact{
+  padding: 10px 10px 40px 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  outline: #333;
+}
+
+.btn-contact {
+  margin: 30px 0 0 42px;
+}
+
+.contact h2 {
+  font-weight: 500;
+}
+
 * footer {
   background-color: #113047;
   height: auto;
   padding: 10px;
   text-align: center;
-  justify-content:space-around;
   color: #fbf0d8;
 }
 
-.footer #p {
-  margin: 0;
-  text-align: center;
-  align-items: center;
+.copyright  {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .footer #p a {
   color: #fbf0d8;
   text-decoration: none;
-}
+  }
 
-.footer a:hover {
+.footer-social a:hover {
   color: #739ab9;
 }
 
-footer .social {
-  margin-top: 30px;
+.footer-social {
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-logo a:hover {
+opacity: 8;
 }
 
 #oops {
@@ -365,6 +469,10 @@ footer .social {
   text-align: center;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (max-width: 549px) {
   .hidden--mobile {
     display: none !important;
@@ -373,7 +481,6 @@ footer .social {
 #nav-header{
   background-color: #b02a29;
   color: #fbf0d8;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -426,6 +533,17 @@ footer .social {
     text-align: center;
   }
 
+  .container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 0;
+    margin: 0 0;
+    }
+
   #about {
     display: flex;
     flex-direction: column;
@@ -468,7 +586,7 @@ footer .social {
     background-color: #b02a29;
     display: flex;
     justify-content:space-around;
-    align-items: center;
+    align-items:center;
     position: sticky;
     margin: 0 0;
     height: 15vh;
@@ -477,6 +595,7 @@ footer .social {
   nav ul > li a {
   color: #fbf0d8;
   text-decoration: none;
+  list-style-type: none;
   font-size: large;
   font-weight: bold;
 }
